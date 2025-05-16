@@ -3,7 +3,6 @@ pragma solidity ^0.8.4;
 
 import 'forge-std/Script.sol';
 import '../src/bridge/BridgeTransfer.sol'; 
-// No longer importing BridgeUpgradeHelper.sol
 import '@openzeppelin/contracts/token/ERC20/IERC20.sol';
 import '@openzeppelin/contracts/proxy/transparent/ProxyAdmin.sol';
 import '@openzeppelin/contracts/proxy/transparent/TransparentUpgradeableProxy.sol';
