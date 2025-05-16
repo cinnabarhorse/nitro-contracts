@@ -25,7 +25,11 @@ contract BridgeUpgrade {
     );
     console.log('BridgeUpgrade: Current implementation:', currentImpl);
 
-    // Perform upgrade
+    // Since we're being executed via delegatecall from the UpgradeExecutor,
+    // we are running in the executor's context and should have its permissions
+    // This means we can directly call the ProxyAdmin
+    console.log('BridgeUpgrade: Directly calling ProxyAdmin.upgradeAndCall');
+
     try
       ProxyAdmin(proxyAdmin).upgradeAndCall(
         TransparentUpgradeableProxy(payable(proxy)),
