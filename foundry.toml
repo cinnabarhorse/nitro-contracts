@@ -46,8 +46,7 @@ sort_imports = false
 runs = 1000
 
 [rpc_endpoints]
-base = "https://mainnet.base.org"
-
+base_mainnet = "${BASE_MAINNET_RPC_URL}"
 
 [profile.fork]
 eth_chain_id = 8453
